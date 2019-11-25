@@ -17,7 +17,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
    end
 
    allow do
-      origins 'automaintainer.net'
+      origins '*.automaintainer.net'
       # Allows frontend app to communicate with rails backend
 
    resource '*',
