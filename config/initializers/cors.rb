@@ -15,4 +15,13 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
    end
+
+   allow do
+      origins 'automaintainer.net'
+      # Allows frontend app to communicate with rails backend
+
+   resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+   end
 end
