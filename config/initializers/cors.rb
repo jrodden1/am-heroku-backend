@@ -9,6 +9,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
    allow do
       origins 'automaintainer-frontend.herokuapp.com'
       # Allows frontend app to communicate with rails backend
+      # Be sure to update frontend ajax calls to: automaintainer-backend.herokuapp.com 
 
    resource '*',
       headers: :any,
